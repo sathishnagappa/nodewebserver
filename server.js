@@ -55,6 +55,15 @@ app.get('/about', (req,res) => {
     });
    });
 
+   app.get('/process', (req,res) => {
+    // res.send("About Page!");
+    res.render("process.hbs", {
+        pageTitle : "Process Page",
+        currentYear : new Date().getFullYear(),
+        processMessage : "Welcome to Process Message"
+    });
+   });
+
 
    app.get('/bad', (req,res) => {
     res.send({                
